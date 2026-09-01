@@ -4,20 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c4a3e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0'/><circle cx='10' cy='13' r='8'/><path d='M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6'/><path d='M18 3 19.1 5.2'/><path d='M22 3 20.9 5.2'/></svg>">
+    
+    <!-- 1. Globale Basis-Styles -->
+    <link rel="stylesheet" type="text/css" href="https://schneckenhausen.com/global.css">
+    
+    <!-- 2. Hochzeits-Spezifische Styles -->
+    <link rel="stylesheet" type="text/css" href="hochzeit.css">
+    
     <title>Schneckenhausen | Hochzeit</title>
 </head>
 
-<body>
+<body class="page-hochzeit">
 
-    <header>
-        <h1>Schneckenhausen 
-            <br>
-            heiratet</h1>
+    <!-- Standardisierter Header -->
+    <header class="site-header">
+        <a href="https://schneckenhausen.com" class="brand-link" title="Zurück zur Startseite">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
+                <path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" />
+                <circle cx="10" cy="13" r="8" />
+                <path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6" />
+                <path d="M18 3 19.1 5.2" />
+                <path d="M22 3 20.9 5.2" />
+            </svg>
+            <span class="brand-title">Schneckenhausen</span>
+        </a>
     </header>
 
     <main class="container">
-        <div class="card">
+        
+        <div class="page-title">
+            <h1>heiratet</h1>
+        </div>
+
+        <article class="card">
             <h2>Save the Date</h2>
             <div class="details-grid">
                 <div class="detail-item">
@@ -29,11 +50,12 @@
                     <a href="https://www.schloss-doehlau.de/" target="_blank" rel="noopener">Schloss Döhlau</a>
                 </div>
             </div>
-        </div>
+        </article>
+
     </main>
 
     <footer>
-        &copy; Schneckenhausen - Philipp & Franziska
+        <p>&copy; Schneckenhausen - Philipp & Franziska</p>
     </footer>
 
 </body>

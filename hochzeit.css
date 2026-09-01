@@ -1,0 +1,104 @@
+/* ==========================================
+   HOCHZEITS-SPEZIFISCHE STYLES (MOBILE-FIRST)
+   ========================================== */
+
+/* Hintergrundbild & Farbanpassungen für das Hochzeitsthema */
+body.page-hochzeit {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/bg.webp');
+    background-size: cover;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; /* Mobile Default: Verhindert Ruckeln auf Handys */
+}
+
+/* Header & Footer Lesbarkeit auf dunklem Hintergrund */
+.page-hochzeit .brand-link,
+.page-hochzeit .brand-icon,
+.page-hochzeit footer {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.page-hochzeit footer a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Unterüberschrift */
+.page-title {
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.page-title h1 {
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-weight: 300;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Kartentitel */
+.card h2 {
+    color: var(--color-primary);
+    font-size: clamp(1.4rem, 4vw, 1.8rem);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+/* Mobile-First Details Grid */
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+
+.detail-item {
+    padding: 16px;
+    background-color: var(--color-bg);
+    border-radius: var(--radius-sm);
+    text-align: center;
+}
+
+.detail-item strong {
+    display: block;
+    color: var(--color-primary);
+    margin-bottom: 4px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.detail-item p,
+.detail-item a {
+    color: var(--color-text-main);
+    text-decoration: none;
+    word-break: break-word;
+    font-size: 1.05rem;
+}
+
+.detail-item a {
+    color: var(--color-accent);
+    font-weight: 600;
+}
+
+.detail-item a:hover {
+    color: var(--color-primary);
+    text-decoration: underline;
+}
+
+/* ==========================================
+   DESKTOP & TABLET ANPASSUNGEN (min-width)
+   ========================================== */
+@media (min-width: 480px) {
+    .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    body.page-hochzeit {
+        background-attachment: fixed; /* Parallax-Effekt nur auf Desktops aktivieren */
+    }
+}
