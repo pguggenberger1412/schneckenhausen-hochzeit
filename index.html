@@ -18,7 +18,7 @@
 
 <body class="page-hochzeit">
 
-    <!-- Standardisierter Header -->
+    <!-- Header -->
     <header class="site-header">
         <a href="https://schneckenhausen.com" class="brand-link" title="Zurück zur Startseite">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
@@ -38,19 +38,96 @@
             <h1>heiratet</h1>
         </div>
 
-        <article class="card">
-            <h2>Save the Date</h2>
-            <div class="details-grid">
-                <div class="detail-item">
-                    <strong>Datum</strong>
-                    <p>15.05.2027</p>
+        <div class="grid-stack">
+            
+            <!-- Karte 1: Save the Date & Eckdaten -->
+            <article class="card">
+                <h2>Save the Date</h2>
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <strong>Datum</strong>
+                        <p>15.05.2027</p>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Ort</strong>
+                        <a href="https://www.schloss-doehlau.de/" target="_blank" rel="noopener">Schloss Döhlau</a>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <strong>Ort</strong>
-                    <a href="https://www.schloss-doehlau.de/" target="_blank" rel="noopener">Schloss Döhlau</a>
+            </article>
+
+            <!-- Karte 2: Tagesablauf / Timeline -->
+            <article class="card">
+                <h2>Tagesablauf</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline-item">
+                        <span class="timeline-time">14:00 Uhr</span>
+                        <div class="timeline-content">
+                            <strong>Ankunft der Gäste</strong>
+                            <p>Treffpunkt im Schlosshof</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">14:30 Uhr</span>
+                        <div class="timeline-content">
+                            <strong>Free-Air Trauung</strong>
+                            <p>Festliche Zeremonie im Schlosspark</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">15:30 Uhr</span>
+                        <div class="timeline-content">
+                            <strong>Sektempfang & Fotos</strong>
+                            <p>Gratulation, Anstoßen & Gruppenfotos</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">16:30 Uhr</span>
+                        <div class="timeline-content">
+                            <strong>Kaffee & Kuchen</strong>
+                            <p>Anschnitt der Hochzeitstorte</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <span class="timeline-time">18:30 Uhr</span>
+                        <div class="timeline-content">
+                            <strong>Abendessen & Party</strong>
+                            <p>Festliches Dinner, Musik & Tanz</p>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-        </article>
+            </article>
+
+            <!-- Karte 3: Anfahrt & Google Maps -->
+            <article class="card">
+                <h2>Anfahrt & Location</h2>
+                <p class="location-address">Schloss Döhlau &bull; Am Schloss 1, 95182 Döhlau</p>
+                
+                <div class="map-wrapper">
+                    <iframe 
+                        title="Karte Schloss Döhlau"
+                        src="https://maps.google.com/maps?q=Schloss%20D%C3%B6hlau&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.google.com/?q=Schloss+D%C3%B6hlau" target="_blank" rel="noopener" class="btn-route">
+                    <span>Route in Google Maps öffnen</span>
+                    <span class="arrow">&rarr;</span>
+                </a>
+            </article>
+
+        </div>
 
     </main>
 

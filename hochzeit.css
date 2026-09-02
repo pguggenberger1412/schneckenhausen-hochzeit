@@ -2,16 +2,16 @@
    HOCHZEITS-SPEZIFISCHE STYLES (MOBILE-FIRST)
    ========================================== */
 
-/* Hintergrundbild & Farbanpassungen für das Hochzeitsthema */
+/* Hintergrundbild */
 body.page-hochzeit {
     background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/bg.webp');
     background-size: cover;
-    background-position: bottom center;
+    background-position: center;
     background-repeat: no-repeat;
-    background-attachment: scroll; /* Mobile Default: Verhindert Ruckeln auf Handys */
+    background-attachment: scroll;
 }
 
-/* Header & Footer Lesbarkeit auf dunklem Hintergrund */
+/* Header & Footer Text-Lesbarkeit */
 .page-hochzeit .brand-link,
 .page-hochzeit .brand-icon,
 .page-hochzeit footer {
@@ -24,10 +24,10 @@ body.page-hochzeit {
     text-decoration: underline;
 }
 
-/* Unterüberschrift */
+/* Titel */
 .page-title {
     text-align: center;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .page-title h1 {
@@ -38,15 +38,25 @@ body.page-hochzeit {
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
 }
 
-/* Kartentitel */
+/* Basiskarten */
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--radius-md, 16px);
+    padding: 24px 20px;
+    box-shadow: var(--shadow-card, 0 8px 24px rgba(0, 0, 0, 0.25));
+    color: var(--color-text-main, #333333);
+}
+
 .card h2 {
-    color: var(--color-primary);
+    color: var(--color-primary, #2c4a3e);
     font-size: clamp(1.4rem, 4vw, 1.8rem);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
-/* Mobile-First Details Grid */
+/* ------------------------------------------
+   DETAILS GRID (Save the Date)
+   ------------------------------------------ */
 .details-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -55,42 +65,165 @@ body.page-hochzeit {
 
 .detail-item {
     padding: 16px;
-    background-color: var(--color-bg);
-    border-radius: var(--radius-sm);
+    background-color: var(--color-bg, #f4f8f3);
+    border-radius: var(--radius-sm, 8px);
     text-align: center;
 }
 
 .detail-item strong {
     display: block;
-    color: var(--color-primary);
+    color: var(--color-primary, #2c4a3e);
     margin-bottom: 4px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
 .detail-item p,
 .detail-item a {
-    color: var(--color-text-main);
+    color: var(--color-text-main, #333333);
     text-decoration: none;
     word-break: break-word;
     font-size: 1.05rem;
 }
 
 .detail-item a {
-    color: var(--color-accent);
+    color: var(--color-accent, #4a7c59);
     font-weight: 600;
 }
 
 .detail-item a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary, #2c4a3e);
     text-decoration: underline;
 }
 
-/* ==========================================
-   DESKTOP & TABLET ANPASSUNGEN (min-width)
-   ========================================== */
+/* ------------------------------------------
+   TIMELINE (Tagesablauf)
+   ------------------------------------------ */
+.timeline {
+    position: relative;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+/* Vertikale Linie */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background-color: var(--color-accent-light, #eaf2eb);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/* Marker-Punkt auf der Linie */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--color-accent, #4a7c59);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 0 2px var(--color-accent, #4a7c59);
+}
+
+.timeline-time {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-primary, #2c4a3e);
+    background-color: var(--color-accent-light, #eaf2eb);
+    padding: 2px 8px;
+    border-radius: 12px;
+    margin-bottom: 6px;
+}
+
+.timeline-content strong {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--color-text-main, #222222);
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #666666);
+    margin-top: 2px;
+}
+
+/* ------------------------------------------
+   MAP & ANFAHRT
+   ------------------------------------------ */
+.location-address {
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-text-muted, #555555);
+    margin-top: -12px;
+    margin-bottom: 16px;
+}
+
+.map-wrapper {
+    width: 100%;
+    border-radius: var(--radius-sm, 8px);
+    overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    background-color: #eee;
+}
+
+.map-wrapper iframe {
+    display: block;
+}
+
+.btn-route {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background-color: var(--color-primary, #2c4a3e);
+    color: #ffffff;
+    padding: 12px 18px;
+    border-radius: var(--radius-sm, 8px);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color var(--transition-fast, 0.2s ease);
+}
+
+.btn-route:hover {
+    background-color: var(--color-primary-hover, #1e352c);
+}
+
+.btn-route .arrow {
+    transition: transform var(--transition-fast, 0.2s ease);
+}
+
+.btn-route:hover .arrow {
+    transform: translateX(4px);
+}
+
+/* ------------------------------------------
+   DESKTOP & TABLET ANPASSUNGEN
+   ------------------------------------------ */
 @media (min-width: 480px) {
+    .card {
+        padding: 32px 28px;
+    }
+
     .details-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 16px;
@@ -99,6 +232,29 @@ body.page-hochzeit {
 
 @media (min-width: 768px) {
     body.page-hochzeit {
-        background-attachment: fixed; /* Parallax-Effekt nur auf Desktops aktivieren */
+        background-attachment: fixed;
+    }
+
+    .timeline {
+        padding-left: 140px;
+    }
+
+    .timeline::before {
+        left: 120px;
+    }
+
+    .timeline-item::before {
+        left: -26px;
+    }
+
+    .timeline-time {
+        position: absolute;
+        left: -140px;
+        top: 2px;
+        width: 100px;
+        text-align: right;
+        background: transparent;
+        padding: 0;
+        font-size: 0.95rem;
     }
 }
