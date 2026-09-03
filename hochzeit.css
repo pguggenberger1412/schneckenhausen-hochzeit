@@ -256,6 +256,74 @@ body.page-hochzeit {
 }
 
 /* ------------------------------------------
+   FAQ ACCORDION STYLES
+   ------------------------------------------ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background-color: var(--color-bg, #f4f8f3);
+    border-radius: var(--radius-sm, 8px);
+    padding: 14px 16px;
+    transition: background-color var(--transition-fast, 0.2s ease);
+}
+
+.faq-item[open] {
+    background-color: var(--color-accent-light, #eaf2eb);
+}
+
+.faq-item summary {
+    font-weight: 600;
+    color: var(--color-primary, #2c4a3e);
+    cursor: pointer;
+    list-style: none; /* Entfernt Standard-Pfeil */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom Plus/Minus Pfeil */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-accent, #4a7c59);
+}
+
+.faq-item[open] summary::after {
+    content: '−';
+}
+
+.faq-item p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: var(--color-text-main, #333333);
+    line-height: 1.5;
+}
+
+/* ------------------------------------------
+   MOBILE OPTIMIERUNG FÜR GOOGLE FORMS
+   ------------------------------------------ */
+.google-form-wrapper {
+    width: 100%;
+    border-radius: var(--radius-sm, 8px);
+    overflow: hidden;
+    /* Verhindert Ruckeln beim Touch-Scrollen auf iOS */
+    -webkit-overflow-scrolling: touch;
+}
+
+.google-form-wrapper iframe {
+    display: block;
+    width: 100%;
+    /* Mehr Höhe auf Handys, da Felder durch Zeilenumbrüche höher werden */
+    height: 850px; 
+    border: none;
+}
+
+/* ------------------------------------------
    DESKTOP & TABLET ANPASSUNGEN
    ------------------------------------------ */
 @media (min-width: 480px) {
@@ -275,6 +343,13 @@ body.page-hochzeit {
 
     .countdown-label {
         font-size: 0.75rem;
+    }
+}
+
+@media (min-width: 600px) {
+    .google-form-wrapper iframe {
+        /* Auf breiteren Displays wird weniger Vertikalraum benötigt */
+        height: 720px; 
     }
 }
 
