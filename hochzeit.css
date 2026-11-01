@@ -54,10 +54,42 @@ body.page-hochzeit {
 }
 
 .hero-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
     margin: 14px 0 0;
     font-size: 1.05rem;
     letter-spacing: 0.04em;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.calendar-link {
+    display: inline-grid;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 auto;
+    place-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.calendar-link:hover {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.calendar-link svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.7;
 }
 
 .page-hochzeit .grid-stack {
@@ -349,7 +381,8 @@ body.page-hochzeit {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .button {
+    .button,
+    .calendar-link {
         transition: none;
     }
 }
