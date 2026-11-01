@@ -66,15 +66,20 @@ body.page-hochzeit {
     justify-content: center;
     gap: 7px;
     margin-top: 10px;
-    color: #365e45;
+    padding: 8px 12px;
+    border: 1px solid #cbd9cc;
+    border-radius: 999px;
+    background: #e8efe7;
+    color: #2c4a3e;
     font-size: 0.82rem;
     font-weight: 700;
     text-decoration: none;
+    transition: background-color 160ms ease, border-color 160ms ease;
 }
 
 .calendar-link:hover {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    border-color: #9fb59f;
+    background: #dce8dc;
 }
 
 .calendar-glyph {
