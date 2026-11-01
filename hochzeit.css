@@ -77,14 +77,27 @@ body.page-hochzeit {
     text-underline-offset: 3px;
 }
 
-.calendar-link svg {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke-width: 1.7;
+.calendar-glyph {
+    position: relative;
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    flex: 0 0 14px;
+    border: 1.5px solid currentColor;
+    border-radius: 3px;
+    background: linear-gradient(currentColor, currentColor) 0 3px / 100% 1px no-repeat;
+}
+
+.calendar-glyph::before {
+    position: absolute;
+    top: -3px;
+    left: 2px;
+    width: 2px;
+    height: 4px;
+    border-radius: 2px;
+    background: currentColor;
+    box-shadow: 6px 0 currentColor;
+    content: '';
 }
 
 .page-hochzeit .grid-stack {
