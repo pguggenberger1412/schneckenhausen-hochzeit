@@ -1,218 +1,198 @@
-/* ==========================================
-   HOCHZEITS-SPEZIFISCHE STYLES (MOBILE-FIRST)
-   ========================================== */
-
-/* Hintergrundbild */
+/* Hochzeitsspezifische Gestaltung; globale Basis bleibt in global.css. */
 body.page-hochzeit {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('assets/bg.webp');
+    background-image: linear-gradient(rgba(24, 37, 29, 0.48), rgba(24, 37, 29, 0.62)), url('assets/bg.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
 }
 
-/* Header & Footer Lesbarkeit */
 .page-hochzeit .brand-link,
 .page-hochzeit .brand-icon,
 .page-hochzeit footer {
-    color: #ffffff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
 }
 
 .page-hochzeit footer a {
-    color: #ffffff;
-    text-decoration: underline;
+    color: #fff;
 }
 
-/* Titel */
-.page-title {
+.page-hochzeit .container {
+    width: min(100% - 32px, 760px);
+    margin-inline: auto;
+}
+
+.page-hochzeit .page-title {
+    margin: 38px 0 28px;
     text-align: center;
-    margin-bottom: 20px;
+    color: #fff;
 }
 
-.page-title h1 {
-    font-size: clamp(2rem, 6vw, 3rem);
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 300;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+.page-hochzeit .page-title h1 {
+    margin: 0;
+    color: inherit;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: 0.015em;
+    line-height: 1.08;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Basiskarten */
-.card {
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: var(--radius-md, 16px);
-    padding: 24px 20px;
-    box-shadow: var(--shadow-card, 0 8px 24px rgba(0, 0, 0, 0.25));
-    color: var(--color-text-main, #333333);
+.eyebrow {
+    margin: 0 0 8px;
+    color: #63806b;
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.card h2 {
-    color: var(--color-primary, #2c4a3e);
-    font-size: clamp(1.4rem, 4vw, 1.8rem);
-    margin-bottom: 20px;
+.page-title .eyebrow {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.hero-date {
+    margin: 14px 0 0;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.page-hochzeit .grid-stack {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+}
+
+.page-hochzeit .card {
+    min-width: 0;
+    padding: clamp(24px, 5vw, 36px);
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 12px 34px rgba(14, 30, 19, 0.14);
+    color: #343a35;
+}
+
+.page-hochzeit .card h2 {
+    margin: 0 0 20px;
+    color: #2c4a3e;
+    font-size: clamp(1.45rem, 4vw, 1.8rem);
+    font-weight: 500;
+    line-height: 1.2;
     text-align: center;
 }
 
-/* ------------------------------------------
-   SAVE THE DATE & MAP INTEGRATION
-   ------------------------------------------ */
+.welcome-copy {
+    max-width: 48ch;
+    margin: 0 auto 22px;
+    color: #555d56;
+    line-height: 1.65;
+    text-align: center;
+}
+
 .details-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 16px;
+    gap: 10px;
+    margin-bottom: 22px;
 }
 
 .detail-item {
-    padding: 16px;
-    background-color: var(--color-bg, #f4f8f3);
-    border-radius: var(--radius-sm, 8px);
+    padding: 14px 16px;
+    border-radius: 12px;
+    background: #f3f6f1;
     text-align: center;
 }
 
 .detail-item strong {
     display: block;
-    color: var(--color-primary, #2c4a3e);
     margin-bottom: 4px;
-    font-size: 0.9rem;
+    color: #68786a;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .detail-item p,
 .detail-item a {
-    color: var(--color-text-main, #333333);
-    text-decoration: none;
-    word-break: break-word;
-    font-size: 1.05rem;
-}
-
-.detail-item a {
-    color: var(--color-accent, #4a7c59);
-    font-weight: 600;
-}
-
-.detail-item a:hover {
-    color: var(--color-primary, #2c4a3e);
-    text-decoration: underline;
-}
-
-/* ------------------------------------------
-   COUNTDOWN COUNTER
-   ------------------------------------------ */
-.countdown-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    margin-bottom: 20px;
-    padding: 16px 12px;
-    background-color: var(--color-accent-light, #eaf2eb);
-    border-radius: var(--radius-sm, 8px);
-    text-align: center;
-}
-
-.countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.countdown-value {
-    font-size: clamp(1.3rem, 4vw, 2rem);
-    font-weight: 700;
-    color: var(--color-primary, #2c4a3e);
-    line-height: 1.1;
-    font-variant-numeric: tabular-nums;
-}
-
-.countdown-label {
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    color: var(--color-text-muted, #666666);
-    margin-top: 4px;
-}
-
-.countdown-finished {
-    grid-column: span 4;
-    font-weight: 700;
-    color: var(--color-primary, #2c4a3e);
-    font-size: 1.1rem;
     margin: 0;
+    color: #303b32;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
 }
 
-.location-address {
+.detail-item a:hover,
+.text-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.rsvp-intro {
+    margin: 0 0 14px;
+    color: #555d56;
+    line-height: 1.55;
     text-align: center;
-    font-size: 0.9rem;
-    color: var(--color-text-muted, #555555);
-    margin-bottom: 16px;
 }
 
-.map-wrapper {
-    width: 100%;
-    border-radius: var(--radius-sm, 8px);
-    overflow: hidden;
-    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-    margin-bottom: 16px;
-    background-color: #eee;
-}
-
-.map-wrapper iframe {
-    display: block;
-}
-
-.btn-route {
+.button {
     display: flex;
+    min-height: 50px;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    width: 100%;
-    background-color: var(--color-primary, #2c4a3e);
-    color: #ffffff;
-    padding: 12px 18px;
-    border-radius: var(--radius-sm, 8px);
+    gap: 10px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-weight: 700;
+    text-align: center;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: background-color var(--transition-fast, 0.2s ease);
+    transition: background-color 160ms ease, transform 160ms ease;
 }
 
-.btn-route:hover {
-    background-color: var(--color-primary-hover, #1e352c);
+.button-primary {
+    background: #2c4a3e;
+    color: #fff;
 }
 
-.btn-route .arrow {
-    transition: transform var(--transition-fast, 0.2s ease);
+.button-primary:hover {
+    transform: translateY(-1px);
+    background: #20382e;
 }
 
-.btn-route:hover .arrow {
-    transform: translateX(4px);
+.page-hochzeit a:focus-visible,
+.page-hochzeit summary:focus-visible {
+    outline: 3px solid #a5753b;
+    outline-offset: 3px;
 }
 
-/* ------------------------------------------
-   TIMELINE (Tagesablauf)
-   ------------------------------------------ */
 .timeline {
     position: relative;
-    padding-left: 20px;
-    margin: 10px 0;
+    display: grid;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .timeline::before {
-    content: '';
     position: absolute;
-    left: 7px;
-    top: 8px;
-    bottom: 8px;
-    width: 2px;
-    background-color: var(--color-accent-light, #eaf2eb);
-    border-radius: 2px;
+    top: 12px;
+    bottom: 12px;
+    left: 49px;
+    width: 1px;
+    background: #dce6dc;
+    content: '';
 }
 
 .timeline-item {
     position: relative;
-    padding-bottom: 24px;
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 18px;
+    padding: 0 0 24px;
 }
 
 .timeline-item:last-child {
@@ -220,77 +200,97 @@ body.page-hochzeit {
 }
 
 .timeline-item::before {
-    content: '';
     position: absolute;
-    left: -20px;
-    top: 6px;
-    width: 12px;
-    height: 12px;
+    top: 5px;
+    left: 45px;
+    width: 9px;
+    height: 9px;
+    border: 2px solid #fff;
     border-radius: 50%;
-    background-color: var(--color-accent, #4a7c59);
-    border: 2px solid #ffffff;
-    box-shadow: 0 0 0 2px var(--color-accent, #4a7c59);
+    background: #63806b;
+    box-shadow: 0 0 0 1px #63806b;
+    content: '';
 }
 
 .timeline-time {
-    display: inline-block;
-    font-size: 0.85rem;
+    color: #536f59;
+    font-size: 0.9rem;
+    font-variant-numeric: tabular-nums;
     font-weight: 700;
-    color: var(--color-primary, #2c4a3e);
-    background-color: var(--color-accent-light, #eaf2eb);
-    padding: 2px 8px;
-    border-radius: 12px;
-    margin-bottom: 6px;
 }
 
 .timeline-content strong {
     display: block;
-    font-size: 1.1rem;
-    color: var(--color-text-main, #222222);
+    color: #303b32;
+    font-size: 1rem;
+    line-height: 1.4;
 }
 
 .timeline-content p {
-    font-size: 0.95rem;
-    color: var(--color-text-muted, #666666);
-    margin-top: 2px;
+    margin: 3px 0 0;
+    color: #69716a;
+    font-size: 0.92rem;
+    line-height: 1.45;
 }
 
-/* ------------------------------------------
-   FAQ ACCORDION STYLES
-   ------------------------------------------ */
+.travel-card {
+    text-align: center;
+}
+
+.travel-card h2 {
+    margin-bottom: 10px !important;
+}
+
+.travel-card address {
+    margin: 0 0 14px;
+    color: #555d56;
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.text-link {
+    color: #365e45;
+    font-weight: 700;
+    text-decoration: none;
+}
+
 .faq-list {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    gap: 9px;
 }
 
 .faq-item {
-    background-color: var(--color-bg, #f4f8f3);
-    border-radius: var(--radius-sm, 8px);
-    padding: 14px 16px;
-    transition: background-color var(--transition-fast, 0.2s ease);
+    padding: 15px 16px;
+    border-radius: 11px;
+    background: #f3f6f1;
 }
 
 .faq-item[open] {
-    background-color: var(--color-accent-light, #eaf2eb);
+    background: #edf3ec;
 }
 
 .faq-item summary {
-    font-weight: 600;
-    color: var(--color-primary, #2c4a3e);
-    cursor: pointer;
-    list-style: none; /* Entfernt Standard-Pfeil */
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    color: #344b39;
+    cursor: pointer;
+    font-weight: 650;
+    line-height: 1.4;
+    list-style: none;
 }
 
-/* Custom Plus/Minus Pfeil */
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
 .faq-item summary::after {
+    flex: 0 0 auto;
+    color: #63806b;
     content: '+';
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: var(--color-accent, #4a7c59);
+    font-size: 1.3rem;
+    line-height: 1;
 }
 
 .faq-item[open] summary::after {
@@ -298,58 +298,47 @@ body.page-hochzeit {
 }
 
 .faq-item p {
-    margin-top: 10px;
-    font-size: 0.95rem;
-    color: var(--color-text-main, #333333);
-    line-height: 1.5;
+    margin: 11px 0 0;
+    color: #515951;
+    font-size: 0.94rem;
+    line-height: 1.6;
 }
 
-/* ------------------------------------------
-   MOBILE OPTIMIERUNG FÜR GOOGLE FORMS
-   ------------------------------------------ */
-.google-form-wrapper {
-    width: 100%;
-    border-radius: var(--radius-sm, 8px);
-    overflow: hidden;
-    /* Verhindert Ruckeln beim Touch-Scrollen auf iOS */
-    -webkit-overflow-scrolling: touch;
+.page-hochzeit footer {
+    margin: 28px 16px 16px;
+    color: rgba(255, 255, 255, 0.92);
+    text-align: center;
 }
 
-.google-form-wrapper iframe {
-    display: block;
-    width: 100%;
-    /* Mehr Höhe auf Handys, da Felder durch Zeilenumbrüche höher werden */
-    height: 850px; 
-    border: none;
-}
+@media (min-width: 560px) {
+    .page-hochzeit .container {
+        width: min(100% - 48px, 760px);
+    }
 
-/* ------------------------------------------
-   DESKTOP & TABLET ANPASSUNGEN
-   ------------------------------------------ */
-@media (min-width: 480px) {
-    .card {
-        padding: 32px 28px;
+    .page-hochzeit .page-title {
+        margin-top: 54px;
+        margin-bottom: 36px;
+    }
+
+    .page-hochzeit .grid-stack {
+        gap: 22px;
     }
 
     .details-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .countdown-wrapper {
-        padding: 20px 16px;
-        gap: 16px;
+    .timeline::before {
+        left: 67px;
     }
 
-    .countdown-label {
-        font-size: 0.75rem;
+    .timeline-item {
+        grid-template-columns: 68px minmax(0, 1fr);
+        gap: 22px;
     }
-}
 
-@media (min-width: 600px) {
-    .google-form-wrapper iframe {
-        /* Auf breiteren Displays wird weniger Vertikalraum benötigt */
-        height: 720px; 
+    .timeline-item::before {
+        left: 63px;
     }
 }
 
@@ -357,27 +346,10 @@ body.page-hochzeit {
     body.page-hochzeit {
         background-attachment: fixed;
     }
+}
 
-    .timeline {
-        padding-left: 140px;
-    }
-
-    .timeline::before {
-        left: 120px;
-    }
-
-    .timeline-item::before {
-        left: -26px;
-    }
-
-    .timeline-time {
-        position: absolute;
-        left: -140px;
-        top: 2px;
-        width: 100px;
-        text-align: right;
-        background: transparent;
-        padding: 0;
-        font-size: 0.95rem;
+@media (prefers-reduced-motion: reduce) {
+    .button {
+        transition: none;
     }
 }

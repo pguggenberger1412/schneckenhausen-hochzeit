@@ -7,23 +7,16 @@
     <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c4a3e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0'/><circle cx='10' cy='13' r='8'/><path d='M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6'/><path d='M18 3 19.1 5.2'/><path d='M22 3 20.9 5.2'/></svg>">
-
-    <!-- 1. Globale Basis-Styles -->
     <link rel="stylesheet" type="text/css" href="https://schneckenhausen.com/global.css">
-
-    <!-- 2. Hochzeits-Spezifische Styles -->
     <link rel="stylesheet" type="text/css" href="hochzeit.css">
-
-    <title>Schneckenhausen | Hochzeit</title>
+    <title>Philipp & Franziska heiraten | Schneckenhausen</title>
 </head>
 
 <body class="page-hochzeit">
-
-    <!-- Header -->
     <header class="site-header">
         <a href="https://schneckenhausen.com" class="brand-link" title="Zurück zur Startseite">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon">
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="brand-icon" aria-hidden="true">
                 <path d="M2 13a6 6 0 1 0 12 0 4 4 0 1 0-8 0 2 2 0 0 0 4 0" />
                 <circle cx="10" cy="13" r="8" />
                 <path d="M2 21h12c4.4 0 8-3.6 8-8V7a2 2 0 1 0-4 0v6" />
@@ -35,196 +28,91 @@
     </header>
 
     <main class="container">
-
-        <div class="page-title">
-            <h1>heiratet</h1>
-        </div>
+        <section class="page-title" aria-labelledby="page-heading">
+            <p class="eyebrow">Philipp & Franziska</p>
+            <h1 id="page-heading">Wir heiraten</h1>
+            <p class="hero-date">15. Mai 2027 · Döhlau</p>
+        </section>
 
         <div class="grid-stack">
-
-            <!-- Kombinierte Karte: Save the Date + Countdown + Anfahrt & Karte -->
-            <article class="card">
-                <h2>Save the Date</h2>
-
+            <section class="card welcome-card" aria-labelledby="welcome-heading">
+                <p class="eyebrow">Wir freuen uns auf euch</p>
+                <h2 id="welcome-heading">Ein Tag zum Feiern</h2>
+                <p class="welcome-copy">Am 15. Mai 2027 möchten wir gemeinsam mit euch unsere Hochzeit feiern. Hier findet ihr die wichtigsten Informationen für den Tag.</p>
                 <div class="details-grid">
                     <div class="detail-item">
                         <strong>Datum</strong>
-                        <p>15.05.2027</p>
+                        <p>Samstag, 15. Mai 2027</p>
                     </div>
                     <div class="detail-item">
                         <strong>Ort</strong>
                         <a href="https://www.schloss-doehlau.de/" target="_blank" rel="noopener">Schloss Döhlau</a>
                     </div>
                 </div>
-
-                <!-- Countdown Counter -->
-                <div class="countdown-wrapper" id="countdown">
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="cd-days">00</span>
-                        <span class="countdown-label">Tage</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="cd-hours">00</span>
-                        <span class="countdown-label">Stunden</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="cd-minutes">00</span>
-                        <span class="countdown-label">Minuten</span>
-                    </div>
-                    <div class="countdown-item">
-                        <span class="countdown-value" id="cd-seconds">00</span>
-                        <span class="countdown-label">Sekunden</span>
-                    </div>
-                </div>
-
-                <p class="location-address">Am Schloss 1, 95182 Döhlau</p>
-
-                <div class="map-wrapper">
-                    <iframe title="Karte Schloss Döhlau"
-                        src="https://maps.google.com/maps?q=Schloss%20D%C3%B6hlau&t=&z=15&ie=UTF8&iwloc=&output=embed"
-                        width="100%" height="280" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
-
-                <a href="https://maps.google.com/?q=Schloss+D%C3%B6hlau" target="_blank" rel="noopener"
-                    class="btn-route">
-                    <span>Route in Google Maps öffnen</span>
-                    <span class="arrow">&rarr;</span>
+                <p class="rsvp-intro">Bitte gebt uns bis zum <strong>1. Februar 2027</strong> Bescheid, ob ihr dabei seid.</p>
+                <a class="button button-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdrd1osNWATXjd03Rx-XZR-k40mS5Lnzqsuw69Y41oKo5T_YA/viewform" target="_blank" rel="noopener">
+                    Rückmeldung geben <span aria-hidden="true">↗</span>
                 </a>
-            </article>
+            </section>
 
-            <!-- Karte 2: Tagesablauf / Timeline -->
-            <article class="card">
-                <h2>Tagesablauf</h2>
-                <div class="timeline">
+            <section class="card" aria-labelledby="schedule-heading">
+                <p class="eyebrow">Samstag, 15. Mai</p>
+                <h2 id="schedule-heading">Der Tagesablauf</h2>
+                <ol class="timeline">
+                    <li class="timeline-item">
+                        <time class="timeline-time" datetime="14:00">14:00</time>
+                        <div class="timeline-content"><strong>Kirchliche Trauung</strong><p>Kirche Döhlau</p></div>
+                    </li>
+                    <li class="timeline-item">
+                        <time class="timeline-time" datetime="15:00">15:00</time>
+                        <div class="timeline-content"><strong>Sektempfang & Fotos</strong><p>Im Schlosspark</p></div>
+                    </li>
+                    <li class="timeline-item">
+                        <time class="timeline-time" datetime="16:30">16:30</time>
+                        <div class="timeline-content"><strong>Kaffee & Kuchen</strong><p>Mit Anschnitt der Hochzeitstorte</p></div>
+                    </li>
+                    <li class="timeline-item">
+                        <time class="timeline-time" datetime="18:30">18:30</time>
+                        <div class="timeline-content"><strong>Abendessen & Party</strong><p>Festliches Dinner, Musik & Tanz</p></div>
+                    </li>
+                </ol>
+            </section>
 
-                    <div class="timeline-item">
-                        <span class="timeline-time">14:00 Uhr</span>
-                        <div class="timeline-content">
-                            <strong>Kirchliche Trauung</strong>
-                            <p>Kirche Döhlau</p>
-                        </div>
-                    </div>
+            <section class="card travel-card" aria-labelledby="travel-heading">
+                <p class="eyebrow">Anfahrt</p>
+                <h2 id="travel-heading">Schloss Döhlau</h2>
+                <address>Am Schloss 1<br>95182 Döhlau</address>
+                <a href="https://maps.google.com/?q=Schloss+D%C3%B6hlau" target="_blank" rel="noopener" class="text-link">
+                    Route in Google Maps öffnen <span aria-hidden="true">↗</span>
+                </a>
+            </section>
 
-                    <div class="timeline-item">
-                        <span class="timeline-time">15:00 Uhr</span>
-                        <div class="timeline-content">
-                            <strong>Sektempfang & Fotos</strong>
-                            <p>Festliche Zeremonie im Schlosspark</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <span class="timeline-time">16:30 Uhr</span>
-                        <div class="timeline-content">
-                            <strong>Kaffee & Kuchen</strong>
-                            <p>Anschnitt der Hochzeitstorte</p>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <span class="timeline-time">18:30 Uhr</span>
-                        <div class="timeline-content">
-                            <strong>Abendessen & Party</strong>
-                            <p>Festliches Dinner, Musik & Tanz</p>
-                        </div>
-                    </div>
-
-                </div>
-            </article>
-            <!-- Karte: RSVP / Rückmeldung -->
-            <!-- Karte: RSVP via Google Form -->
-            <article class="card">
-                <h2>Rückmeldung (RSVP)</h2>
-                <p class="rsvp-intro">Bitte gebt uns bis zum <strong>01.02.2027</strong> Bescheid, ob ihr dabei seid.
-                </p>
-
-                <div class="google-form-wrapper">
-                    <iframe
-                        src="https://docs.google.com/forms/d/e/1FAIpQLSdrd1osNWATXjd03Rx-XZR-k40mS5Lnzqsuw69Y41oKo5T_YA/viewform?embedded=true"
-                        width="640" height="972" frameborder="0" marginheight="0" marginwidth="0">Wird geladen…</iframe>
-                </div>
-            </article>
-
-            <article class="card">
-                <h2>Häufige Fragen (FAQ)</h2>
-
+            <section class="card" aria-labelledby="faq-heading">
+                <p class="eyebrow">Gut zu wissen</p>
+                <h2 id="faq-heading">Häufige Fragen</h2>
                 <div class="faq-list">
-
                     <details class="faq-item">
                         <summary>Gibt es einen Dresscode?</summary>
                         <p>Wir bitten um festliche Kleidung. Am liebsten in hellen Sommerfarben oder Erdtönen.</p>
                     </details>
-
                     <details class="faq-item">
-                        <summary>Was wünschen wir uns zur Hochzeit?</summary>
-                        <p>Eure Anwesenheit ist das schönste Geschenk! Wenn ihr uns eine Freude machen möchtet, freuen
-                            wir
-                            uns über einen Beitrag zu unseren Flitterwochen.</p>
+                        <summary>Was wünscht ihr euch zur Hochzeit?</summary>
+                        <p>Eure Anwesenheit ist das schönste Geschenk! Wenn ihr uns eine Freude machen möchtet, freuen wir uns über einen Beitrag zu unseren Flitterwochen.</p>
                     </details>
-
                     <details class="faq-item">
                         <summary>Dürfen wir während der Trauung Fotos machen?</summary>
-                        <p>Wir möchten die Trauung „unplugged“ genießen. Bitte lasst eure Handys und Kameras in den
-                            Taschen
-                            – unsere Fotografin kümmert sich um wunderschöne Erinnerungen.</p>
+                        <p>Wir möchten die Trauung „unplugged“ genießen. Bitte lasst eure Handys und Kameras in den Taschen – unsere Fotografin kümmert sich um wunderschöne Erinnerungen.</p>
                     </details>
-
                     <details class="faq-item">
                         <summary>Bis wann sollen wir zu- oder absagen?</summary>
-                        <p>Bitte gebt uns bis zum <strong>01. Februar 2027</strong> Bescheid, ob ihr dabei sein könnt.
-                        </p>
+                        <p>Bitte gebt uns bis zum <strong>1. Februar 2027</strong> Bescheid, ob ihr dabei sein könnt.</p>
                     </details>
-
                 </div>
-            </article>
-
+            </section>
         </div>
-
-
     </main>
 
-    <footer>
-        <p>&copy; Schneckenhausen - Philipp & Franziska</p>
-    </footer>
-
-    <!-- Countdown Skript -->
-    <script>
-        (function () {
-            // Zielzeit: 15. Mai 2027 um 14:00 Uhr
-            const targetDate = new Date("2027-05-15T14:00:00").getTime();
-
-            const elDays = document.getElementById("cd-days");
-            const elHours = document.getElementById("cd-hours");
-            const elMinutes = document.getElementById("cd-minutes");
-            const elSeconds = document.getElementById("cd-seconds");
-            const countdownContainer = document.getElementById("countdown");
-
-            function updateCountdown() {
-                const now = new Date().getTime();
-                const diff = targetDate - now;
-
-                if (diff <= 0) {
-                    countdownContainer.innerHTML = "<p class='countdown-finished'>🎉 Der große Tag ist da!</p>";
-                    return;
-                }
-
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-                elDays.textContent = String(days).padStart(2, '0');
-                elHours.textContent = String(hours).padStart(2, '0');
-                elMinutes.textContent = String(minutes).padStart(2, '0');
-                elSeconds.textContent = String(seconds).padStart(2, '0');
-            }
-
-            updateCountdown();
-            setInterval(updateCountdown, 1000);
-        })();
-    </script>
-
+    <footer><p>&copy; Schneckenhausen – Philipp & Franziska</p></footer>
 </body>
 
 </html>
